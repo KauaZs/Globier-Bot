@@ -8,7 +8,7 @@ const db = require('secure-db')
 
   let channelsData = db.get(`channels`) 
   if(channelsData?.includes(message.channel.id)) {
-require('../../client/global.js').run(client, message)
+   require('../../client/global.js').run(client, message)
   }
   if(!message.content.startsWith(prefix)) return;  
   const args = message.content.slice(prefix.length).trim().split(' ');
